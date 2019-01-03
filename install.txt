@@ -1,0 +1,13 @@
+'''
+1 - Copy / paste the following lines into your local menu.py
+2 - Copy files from "icons" and "python" folders into your .nuke folder
+3 - Tested only on windows
+'''
+
+import nuke
+nuke.pluginAddPath('./icons/Franklin');
+nuke.pluginAddPath('./python/Franklin');
+
+import nukeSwitch
+menuF = nuke.menu("Nuke").addMenu("Franklin", icon="franklin.png")
+menuF.addCommand('Nuke X Switch ', nukeSwitch.versionSwitch, icon="F_nukeswitch.png")  
